@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <video id="video-player" playsinline></video>
+
+        <script src="https://player.live-video.net/1.0.0/amazon-ivs-player.min.js"></script>
+        <script>
+          if (IVSPlayer.isPlayerSupported) {
+            const player = IVSPlayer.create();
+            player.attachHTMLVideoElement(document.getElementById('video-player'));
+            player.load('https://4beb8bbc7162.us-east-1.playback.live-video.net/api/video/v1/us-east-1.411392617120.channel.J8JAB81zRD6g.m3u8');
+            player.play();
+          }
+        </script>
+    </body>
+</html>
